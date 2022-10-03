@@ -10,6 +10,10 @@ Most mappings work in normal, insert, visual, and cmdline mode.
 
 `<C-K>` kills the rest of the line in insert/cmdline mode. (`<C-U>` is built-in and kills the beginning of the line.)
 
+`<C-S-K>` deletes the current line.
+
+**NOTE:** On macOS, the mapping to delete the current line should be `<D-S-K>` (i.e. Cmd+Shift+K) but neovim does not seem to support this even with its `CSI u` support. Therefore, macOS users should map Cmd+Shift+K to emit Ctrl+Shift+K in their terminals.
+
 `<C-T>` transposes the previous two characters in insert/cmdline mode. For original `<C-T>` behavior: `<C-F>` (added) and `<C-D>` (built-in) indent/dedent the current line in insert mode.
 
 `<M-t>` and `<M-T>` transpose the previous two words/WORDS.

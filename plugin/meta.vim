@@ -15,6 +15,10 @@ noremap! <C-E> <End>
 inoremap <expr> <C-K> col('.') is col('$') ? '' : '<C-O>D'
 cnoremap <C-K> <C-\>e getcmdpos() is 1 ? '' : getcmdline()[:getcmdpos()-2]<CR>
 
+nnoremap <C-S-K> dd
+xnoremap <C-S-K> d
+inoremap <C-S-K> <C-O>dd
+
 noremap! <expr> <C-T> <SID>TransposeCharsExpr()
 inoremap <M-t> <Space><Left><Esc>wgediw"_xbPa<Space><C-O>w<C-O>ge<Right><Del>
 inoremap <M-T> <Space><Left><Esc>WgEdiW"_xBPa<Space><C-O>W<C-O>gE<Right><Del>
@@ -48,6 +52,11 @@ noremap! <M-BS> <C-W>
 inoremap <M-Del> <C-O>de
 cnoremap <M-Del> <C-\>e <SID>CmdlineDelete('e')<CR>
 
+" Vim can't detect <M-S-BS> so we rely on the user to configure their terminal
+" to convert it to <M-B> if desired. For example, in kitty config:
+"
+"     map shift+alt+backspace send_text all \x1bB
+"
 inoremap <expr> <M-B> col('.') is col('$') ? 'x<C-O>dB<BS>' : '<C-O>dB'
 cnoremap <M-B> <C-\>e <SID>CmdlineDelete('B')<CR>
 
