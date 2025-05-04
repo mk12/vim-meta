@@ -18,7 +18,7 @@ Most mappings work in normal, insert, visual, and cmdline mode.
 
 `<M-t>` and `<M-T>` transpose the previous two words/WORDS.
 
-`<M-Left>` and `<M-Right>` navigate by words. `<M-BS>` and `<M-Del>` delete them.
+`<M-b>`/`<M-Left>` and `<M-f>`/`<M-Right>` navigate by words. `<M-BS>` and `<M-Del>` delete them.
 
 `<M-S-Left>` and `<M-S-Right>` navigate by WORDS. `<M-B>` and `<M-S-Del>` delete them.
 

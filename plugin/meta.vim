@@ -29,10 +29,16 @@ cmap <M-T> <C-F>i<M-T><C-c>
 " New mapping for <C-T> indent.
 inoremap <C-F> <C-T>
 
+noremap <M-b> b
+inoremap <M-b> <C-O>b
+cnoremap <M-b> <C-\>e <SID>CmdlineNavigate('b')<CR>
 noremap <M-Left> b
 inoremap <M-Left> <C-O>b
 cnoremap <M-Left> <C-\>e <SID>CmdlineNavigate('b')<CR>
 
+noremap <expr> <M-f> <SID>NormalNavigateExpr('e')
+inoremap <expr> <M-f> <SID>InsertNavigateExpr('e')
+cnoremap <M-f> <C-\>e <SID>CmdlineNavigate('e')<CR>
 noremap <expr> <M-Right> <SID>NormalNavigateExpr('e')
 inoremap <expr> <M-Right> <SID>InsertNavigateExpr('e')
 cnoremap <M-Right> <C-\>e <SID>CmdlineNavigate('e')<CR>
